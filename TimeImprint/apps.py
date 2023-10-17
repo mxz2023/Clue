@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class TimeimprintConfig(AppConfig):
+class TimeImprintConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'timeimprint'
