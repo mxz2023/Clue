@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+
+from timeimprint.models import DateEvent
+from timeimprint.serializer import DateEventSerializer
+
 
 # Create your views here.
-from django.shortcuts import render
-
-
-def index(request):
-    return render(request, 'timeimprint/index.html')
+class DateEventViewSet(viewsets.ModelViewSet):
+    queryset = DateEvent.objects.all()
+    serializer_class = DateEventSerializer
