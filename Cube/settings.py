@@ -120,11 +120,21 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
+
+# TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_L10N = False
+
+# 如果 USE_TZ 是 False，这将是一个 naive 的日期时间（即一个没有关联时区的日期时间），代表系统当地时区的当前时间。
+# 如果 USE_TZ 是 True，这将是一个 aware 的日期时间，代表当前的 UTC 时间。
+# 请注意，无论 TIME_ZONE 的值是多少， now() 将始终返回以 UTC 为单位的时间；你可以使用 localtime() 来获取当前时区的时间。
+USE_TZ = False
+
+
 
 
 # Static files (CSS, JavaScript, Images)
