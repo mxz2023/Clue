@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'userinfo.middle.auth_middle.AuthMiddleWare'
 ]
 
 ROOT_URLCONF = 'cube.urls'
