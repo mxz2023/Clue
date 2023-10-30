@@ -12,3 +12,8 @@ class MxzUser(AbstractUser):
 
     def __str__(self):
         return self.username
+
+    class Meta(AbstractUser.Meta):
+        permissions = (
+            ['check_mxzuser', '审核用户信息'],
+        )
