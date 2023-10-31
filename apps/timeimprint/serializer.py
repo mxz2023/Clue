@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from timeimprint.models import DateEvent
+from apps.timeimprint.models import DateEvent
 
 
 class DateEventSerializer(serializers.ModelSerializer):

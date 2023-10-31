@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from timeimprint.models import DateEvent
-from timeimprint.serializer import DateEventSerializer
+from apps.timeimprint.models import DateEvent
+from apps.timeimprint.serializer import DateEventSerializer
 
 
 # Create your views here.

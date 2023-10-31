@@ -1,11 +1,9 @@
-from django.shortcuts import render
-
 # Create your views here.
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 
-from userinfo.models import MxzUser
+from apps.userinfo.models import MxzUser
 
 
 def user_reg(request):

@@ -20,6 +20,6 @@ from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('timeimprint.urls')),
+    path('api/', include('apps.timeimprint.urls')),
     path('', TemplateView.as_view(template_name='index.html'))
 ]

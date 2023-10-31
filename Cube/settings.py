@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'userinfo',
-    'timeimprint',
+    'apps.userinfo',
+    'apps.timeimprint',
 ]
 
 MIDDLEWARE = [

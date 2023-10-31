@@ -1,8 +1,7 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from timeimprint import views
-
+from apps.timeimprint import views
 
 router = DefaultRouter()
 router.register('timeimprint', views.DateEventViewSet)
