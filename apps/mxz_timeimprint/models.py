@@ -5,7 +5,7 @@ from django.db import models
 
 
 # Create your models here.
-class DateEvent(models.Model):
+class MxzDateEvent(models.Model):
     id = models.AutoField(primary_key=True, auto_created=True, editable=False, verbose_name="事件Id")
     event_content = models.TextField(verbose_name='事件内容')
     date = models.DateField(null=True, default=datetime.date.today, verbose_name='日期')

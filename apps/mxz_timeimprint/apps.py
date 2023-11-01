@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class UserinfoConfig(AppConfig):
+class MxzTimeImprintConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.userinfo'
+    name = 'apps.mxz_timeimprint'

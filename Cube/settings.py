@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'apps.userinfo',
-    'apps.timeimprint',
+    'apps.mxz_userinfo',
+    'apps.mxz_timeimprint',
+    'apps.mxz_calendar'
 ]
 
 MIDDLEWARE = [
@@ -150,4 +151,4 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 # 指定系统默认用户模型
-AUTH_USER_MODEL = 'userinfo.MxzUser'
+AUTH_USER_MODEL = 'mxz_userinfo.MxzUser'
