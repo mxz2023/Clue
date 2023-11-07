@@ -2,22 +2,26 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-
+from django.views.decorators.csrf import csrf_exempt
 from apps.mxz_userinfo.models import MxzUser
 
 
+@csrf_exempt
 def user_reg(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        if User.objects.filter(username=username).exists():
+        if username is None or password is None:
+            return HttpResponse("用户名或密码为空")
+
+        if MxzUser.objects.filter(username=username).exists():
             msg = '用户已存在'
         else:
             d = dict(username=username, password=password, is_staff=1, is_active=1, is_superuser=1)
-            user = User.objects.create_user(**d)
+            user = MxzUser.objects.create_user(**d)
             msg = '注册成功'
         return HttpResponse(msg)
     else:
@@ -29,7 +33,7 @@ def user_login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        if User.objects.filter(username=username).exists():
+        if MxzUser.objects.filter(username=username).exists():
             # authenticate()函数用于验证用户的用户名和密码是否正确
             user = authenticate(username=username, password=password)
             if user:
