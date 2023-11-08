@@ -5,7 +5,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class MxzUser(AbstractUser):
-    token = models.CharField(max_length=32, verbose_name='Token')
+    # token = models.CharField(max_length=32, verbose_name='Token')
 
     nickname = models.CharField(max_length=32, null=True, blank=True, verbose_name='昵称')
     photo = models.CharField(max_length=128, null=True, blank=True, verbose_name='头像')
