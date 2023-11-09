@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'apps.mxz_userinfo',
     'apps.mxz_timeimprint',
-    'apps.mxz_calendar'
+    'apps.mxz_calendar',
+    'apps.mxz_basic',
+    'apps.mxz_goods',
+    'apps.mxz_order',
+    'apps.mxz_users',
 ]
 
 MIDDLEWARE = [
